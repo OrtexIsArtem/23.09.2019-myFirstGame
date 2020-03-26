@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/4571d0f942.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<div class="background">
+  <div class="container">
+    <div class="menu-bg">
+      <div class="menu">
+        <button class="btn-ball">Шарик</button>
+      
+      </div>
+    </div><!-- menu -->
+    <div class="ball-bg hide">
+      
+      
+      <span class="time-end"></span>
+      
+      <div class="tabl-records hide">
+        <div class="tabl-records__content">
+          <h2 class="records-title">Таблица рекордов</h2>
+          <ol class="records-list">
+            <li class="records__item"></li>
+            <li class="records__item"></li>
+            <li class="records__item"></li>
+            <li class="records__item"></li>
+            <li class="records__item"></li>
+          </ol>
+          <button class="btn-clear__record">Очистить</button>
+        </div>
+      </div>
+      
+      <ul class="infoLvl hide">
+        <li class="ezLvlItem">У тебя есть 15 секуд</li>
+        <li class="ezLvlItem">Лопни как можно больше шариков</li>
+        <li class="ezLvlItem">В разработке</li>
+      </ul>
+      <span class="scoreOut"></span>
+      <h2 class="title-ball__menu">Выберите уровень сложности</h2>
+      <button class="settingBallBtn"><i class="fas fa-cogs"></i></button>
+      <div class="settingBall hide">
+        <form action="#">
+          <div class="ball-color game-color">
+            <h4 class="title-game">Цвет игрового поля</h4>
+            <input class="game-color__input" type="color" value="#c0afc5">
+            <i class="fas fa-sort-down arrows"></i>
+          </div>
+          <div class="ball-size">
+            <h4 class="settingBall__ball-size">Разер шара</h4>
+            <input class="settingBall__ball-size__input" type="range" min="5" max="60" value="30">
+            <span class="ball-size__out">30</span>
+          </div>
+          <div class="ball-color">
+            <h4 class="settingBall__ball-color">Цвет шара</h4>
+            <input class="settingBall__ball-color-input" type="color" value="#00a700">
+            <i class="fas fa-sort-down arrows"></i>
+          </div>
+        </form>
+        <div class="reset-btn hide">
+          <button class="reserSetting">По умолчанию</button>
+        </div>
+        <button class="back-setting"><i class="fas fa-long-arrow-alt-left"></i></button>
+      </div>
+      <div class="ball-menu__lvl">
+        
+        <button class="ball-menu ball-menu__easy">Легкий</button>
+        <span class="btn-lvl__info btn-easy ">Играть только на тачпаде!))</span>
+        <button class="ball-menu ball-menu__medium">Средний</button>
+        <span class="btn-lvl__info btn-medium ">Вот это уже веселая штука!)</span>
+        <button class="ball-menu ball-menu__hard">Сложный</button>
+        <span class="btn-lvl__info btn-hard ">Анимации, увеличена скорость</span>
+      </div>
+    </div><!-- ball -->
+  </div><!-- container -->
+</div>
+
+
+<div class="modal-end__game hide">
+  <h2 class="modal-title">Игра окончена</h2>
+  <h3 class="modal-text__info"></h3>
+  <h3 class="modal-text__lvl"></h3>
+  <h3 class="modal-text__miss"></h3>
+  <button class="modal-restart">Переиграть</button>
+  <button class="modal-load">В меню</button>
+</div>
+
+<div class="paralax-bg">
+  <div class="parallax"></div>
+  <div class="parallax-text"></div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

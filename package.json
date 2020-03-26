@@ -1,0 +1,25 @@
+{
+  "name": "js41-gulp",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src/js -d src/scripts --presets es2015",
+    "babelLive": "babel src/js -d src/scripts --presets es2015 -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

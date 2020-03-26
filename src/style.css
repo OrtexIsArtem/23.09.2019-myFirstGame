@@ -1,0 +1,545 @@
+/* общие стили */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  user-select: none;
+  cursor: url('gam1537.cur'), auto;
+
+}
+
+button {
+  display: block;
+  cursor: url('gam1537.cur'),
+    auto;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: rgb(53, 181, 255);
+  margin: auto;
+  min-width: 110px;
+  min-height: 39px;
+}
+
+input {
+  cursor: url('gam1537.cur'),
+    auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-bg {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(83, 2, 83, 0.39);
+}
+
+.btn-ball {
+  width: 220px;
+  margin-bottom: 20px;
+  padding: 20px 46px;
+  border-radius: 20px;
+  background-color: rgb(149, 51, 239);
+}
+
+.btn-clicker {
+  width: 260px;
+  padding: 20px 46px;
+  background-color: rgb(158, 52, 255);
+}
+
+/* стили игры "шар" */
+.ball-bg {
+  width: 1100px;
+  height: 600px;
+  background-color: #c0afc5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.ball {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #00a700;
+  position: absolute;
+  z-index: 9999;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.ball-color {
+  display: flex;
+  align-items: center;
+}
+
+.settingBall__ball-color {
+  margin-left: 10px;
+}
+
+.settingBall__ball-color-input {
+  margin-left: 10px;
+  border: none;
+  background: none;
+
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 124px;
+}
+
+.settingBallBtn {
+  min-width: 60px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  font-size: 36px;
+  background: none;
+  border: 1px solid;
+  border-radius: 0;
+  border-color: black;
+}
+
+.arrows {
+  margin-top: -11px;
+  font-size: 27px;
+
+}
+
+.game-color {
+  margin-left: 10px;
+}
+
+.game-color__input {
+  margin-left: 50px;
+  border: none;
+  background: none;
+
+  width: 30px;
+  height: 30px;
+}
+
+.settingBall {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #956b9c;
+  -webkit-box-shadow: 0px 0px 31px 6px rgba(149, 107, 156, 1);
+  -moz-box-shadow: 0px 0px 31px 6px rgba(149, 107, 156, 1);
+  box-shadow: 0px 0px 31px 6px rgba(149, 107, 156, 1);
+}
+
+.settingBall__ball-size {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.settingBall__ball-size__input {
+  max-width: 140px;
+  text-align: center;
+  margin-left: 60px;
+}
+
+.back-setting {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: #713b92;
+  width: 100px;
+  font-size: 36px;
+}
+
+.reset-btn {
+  margin-top: 100px;
+}
+
+.reserSetting {
+  display: flex;
+  margin-left: 10px;
+  padding: 16px 25px;
+  background-color: #713b92;
+}
+
+.play {
+  width: 210px;
+  margin-bottom: 20px;
+  padding: 20px 43px;
+  background-color: rgb(221, 164, 8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+
+  border: none;
+  outline: none;
+}
+
+.ball-menu {
+  width: 210px;
+  margin-bottom: 37px;
+  padding: 20px 43px;
+  display: inline-block;
+}
+
+.ball-menu__lvl {
+  width: 220px;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.ball-menu__easy {
+  background-color: rgb(19, 202, 13);
+}
+
+.ball-menu__medium {
+  background-color: rgb(221, 164, 8);
+}
+
+.ball-menu__hard {
+  background-color: rgb(235, 67, 38);
+}
+
+.title-ball__menu {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.scoreOut {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  font-size: 40px;
+  color: #000000;
+}
+
+.ezLvl {
+  list-style: none;
+}
+
+.ezLvlItem {
+  margin-bottom: 7px;
+  font-style: italic;
+}
+
+.time-end {
+  font-size: 21px;
+}
+
+.modal-end__game {
+  display: block;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 310px;
+  height: 325px;
+  border-radius: 10px;
+}
+
+
+.modal-title {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.modal-restart {
+  max-width: 130px;
+  display: inline-block;
+  padding: 16px 25px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: rgb(255, 157, 28);
+}
+
+.modal-load {
+  min-width: 130px;
+  display: inline-block;
+  padding: 16px 25px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  background-color: rgb(255, 157, 28);
+}
+
+.tabl-records__content {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 90px;
+  overflow: hidden;
+  background-color: #dcdcdc;
+  box-shadow: 6.018px 7.986px 28.7px 6.3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  transition: 0.3s;
+}
+
+.tabl-records__content:hover {
+  height: 425px;
+  transition: 0.3s;
+}
+
+.records__item {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+li {
+  font-size: 18px;
+}
+
+.btn-clear__record {
+  min-width: 130px;
+  display: inline-block;
+  padding: 16px 35px;
+  margin: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+  background-color: rgb(255, 157, 28);
+}
+
+.records-title {
+  margin: 13px auto;
+}
+
+.btn-lvl__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 30px;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 15px;
+  padding: 3px 11px;
+  font-size: 14px;
+}
+
+
+.btn-easy {
+  position: absolute;
+  left: 4px;
+  top: -35px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.btn-medium {
+  position: absolute;
+  left: 4px;
+  top: 59px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.btn-hard {
+  position: absolute;
+  left: 4px;
+  top: 151px;
+  font-size: 13px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.records-list {
+  float: left;
+}
+
+.paralax-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 120%;
+  z-index: -1;
+}
+
+.parallax-text {
+  position: absolute;
+  left: -25px;
+  top: 0;
+  width: 110%;
+  height: 100%;
+  background-size: cover;
+  background: url('bgText2.png') center no-repeat;
+}
+.parallax {
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  width: 120%;
+  height: 100%;
+  background: url('bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.btn-shop {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shop {
+  position: relative;
+  z-index: 999;
+  width: 1100px;
+  height: 600px;
+  background-color: #c5c5c5;
+}
+
+.btn-back {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.shop-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.shop-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 600px;
+  height: 350px;
+  margin: auto;
+  margin-top: 115px;
+  background-color: #d2d2d2;
+}
+
+.shop-item {
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #260036;
+  z-index: 9999;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 7px solid #d2d2d2;
+  border-top-color: blueviolet;
+  border-radius: 50%;
+  animation: move 1.5s infinite linear;
+}
+
+.load {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+@keyframes move{
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+@keyframes muveAnim-1 {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 120px;
+  }
+}
+
+@keyframes muveAnim-2 {
+  0% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 120px;
+  }
+}
+
+@keyframes muveAnim-3 {
+  0% {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-top: 120px;
+    margin-left: 120px;
+  }
+}
